@@ -177,7 +177,7 @@ var playState = {
 		this.moveLeft = false;
 		this.moveRight = false;
 
-		this.leftButton = game.add.sprite(50, 247, 'leftButton');
+		this.leftButton = game.add.sprite(20, 0, 'leftButton');
 		this.leftButton.inputEnabled = true;
 		this.leftButton.events.onInputOver.add(function(){this.moveLeft=true;}, this);
 		this.leftButton.events.onInputOut.add(function(){this.moveLeft=false;}, this);
@@ -185,7 +185,7 @@ var playState = {
 		this.leftButton.events.onInputUp.add(function(){this.moveLeft=false;}, this);
 		this.leftButton.alpha = 0.5;
 
-		this.rightButton = game.add.sprite(130, 247, 'rightButton');
+		this.rightButton = game.add.sprite(100, 0, 'rightButton');
 		this.rightButton.inputEnabled = true;
 		this.rightButton.events.onInputOver.add(function(){this.moveRight=true;}, this);
 		this.rightButton.events.onInputOut.add(function(){this.moveRight=false;}, this);
