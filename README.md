@@ -1,2 +1,2 @@
 # Elemental-Platformer
-A Platformer game made in phaser 
+A Platformer game made in phaser.js 
