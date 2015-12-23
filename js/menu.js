@@ -1,7 +1,8 @@
 var menuState = {
 
 	create: function() { 
-		game.add.image(0, 0, 'background');
+	    game.add.image(0, 0, 'background');
+	    //game.add.image(0, 0, 'grasslandBg');
 
 		var nameLabel = game.add.text(game.world.centerX, -50, 'Super Coin Box', { font: '70px Geo', fill: '#ffffff' });
 		nameLabel.anchor.setTo(0.5, 0.5);

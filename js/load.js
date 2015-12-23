@@ -18,6 +18,8 @@ var loadState = {
 		game.load.image('rightButton', 'assets/rightButton.png');
 		game.load.image('leftButton', 'assets/leftButton.png');
 
+		game.load.image('grasslandBg', 'assets/grassland.png');
+    
 		game.load.audio('jump', ['assets/jump.ogg', 'assets/jump.mp3']);
 		game.load.audio('coin', ['assets/coin.ogg', 'assets/coin.mp3']);
 		game.load.audio('dead', ['assets/dead.ogg', 'assets/dead.mp3']);
