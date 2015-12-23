@@ -30,11 +30,7 @@ var playState = {
 		game.physics.arcade.enable(this.coin); 
 		this.coin.anchor.setTo(0.5, 0.5);
 
-<<<<<<< HEAD
 		this.scoreLabel = game.add.text(30, 30, 'score: 0', { font: '18px Arial', fill: '#000000' });	
-=======
-		this.scoreLabel = game.add.text(30, 30, 'score: 0', { font: '18px Arial', fill: '#ffffff' });	
->>>>>>> fa4e28c40f0011c975a6ffd91b006046b7f13c96
 
 		this.emitter = game.add.emitter(0, 0, 15);
 		this.emitter.makeParticles('pixel');
@@ -71,19 +67,12 @@ var playState = {
 	},
 
 	movePlayer: function() {
-<<<<<<< HEAD
-		if (this.cursor.left.isDown || this.wasd.left.isDown || (this.moveLeft>0)) {
-			this.player.body.velocity.x = -200;
-			this.player.animations.play('left');
-		}
-		else if (this.cursor.right.isDown || this.wasd.right.isDown || (this.moveRight>0)) {
-=======
+
 		if (this.cursor.left.isDown || this.wasd.left.isDown || this.moveLeft) {
 			this.player.body.velocity.x = -200;
 			this.player.animations.play('left');
 		}
 		else if (this.cursor.right.isDown || this.wasd.right.isDown || this.moveRight) {
->>>>>>> fa4e28c40f0011c975a6ffd91b006046b7f13c96
 			this.player.body.velocity.x = 200;
 			this.player.animations.play('right');
 		}
@@ -169,12 +158,8 @@ var playState = {
 		game.state.start('menu');
 	},
 
-<<<<<<< HEAD
 	createWorld: function () {
 	    this.bg = game.add.sprite(0, 0, 'grasslandBg');
-=======
-	createWorld: function() {
->>>>>>> fa4e28c40f0011c975a6ffd91b006046b7f13c96
  		this.map = game.add.tilemap('map'); 
         this.map.addTilesetImage('tileset'); 
         this.layer = this.map.createLayer('Tile Layer 1');
@@ -183,54 +168,12 @@ var playState = {
 	},
 
 	addMobileInputs: function() {
-<<<<<<< HEAD
 	    //this.jumpButton = game.add.sprite(350, 247, 'jumpButton');
 	    this.jumpButton = game.add.sprite(350, 0, 'jumpButton');
-=======
-		this.jumpButton = game.add.sprite(350, 247, 'jumpButton');
->>>>>>> fa4e28c40f0011c975a6ffd91b006046b7f13c96
 		this.jumpButton.inputEnabled = true;
 		this.jumpButton.events.onInputDown.add(this.jumpPlayer, this);
 		this.jumpButton.alpha = 0.5;
 
-<<<<<<< HEAD
-		this.moveLeft = 0;
-		this.moveRight = 0;
-
-	    //this.leftButton = game.add.sprite(50, 247, 'leftButton');
-	    this.leftButton = game.add.sprite(20, 0, 'leftButton');
-		this.leftButton.inputEnabled = true;
-		this.leftButton.events.onInputOver.add(this.setMoveLeft, this);
-		this.leftButton.events.onInputOut.add(this.unsetMoveLeft, this);
-		this.leftButton.events.onInputDown.add(this.setMoveLeft, this);
-		this.leftButton.events.onInputUp.add(this.unsetMoveLeft, this);
-		this.leftButton.alpha = 0.5;
-    
-	    //this.rightButton = game.add.sprite(130, 247, 'rightButton');
-	    this.rightButton = game.add.sprite(100, 0, 'rightButton');
-		this.rightButton.inputEnabled = true;
-		this.rightButton.events.onInputOver.add(this.setMoveRight, this);
-		this.rightButton.events.onInputOut.add(this.unsetMoveRight, this);
-		this.rightButton.events.onInputDown.add(this.setMoveRight, this);
-		this.rightButton.events.onInputUp.add(this.unsetMoveRight, this);
-		this.rightButton.alpha = 0.5;
-	},
-
-	setMoveRight: function(){
-	    this.moveRight = 1;
-	},
-
-	setMoveLeft: function() {
-	    this.moveLeft = 1;
-	},
-
-	unsetMoveRight: function () {
-	    this.moveRight = 0;
-	},
-
-	unsetMoveLeft: function () {
-	    this.moveLeft = 0;
-=======
 		this.moveLeft = false;
 		this.moveRight = false;
 
@@ -249,6 +192,5 @@ var playState = {
 		this.rightButton.events.onInputDown.add(function(){this.moveRight=true;}, this);
 		this.rightButton.events.onInputUp.add(function(){this.moveRight=false;}, this);
 		this.rightButton.alpha = 0.5;
->>>>>>> fa4e28c40f0011c975a6ffd91b006046b7f13c96
 	}
 };
